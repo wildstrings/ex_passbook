@@ -7,6 +7,8 @@ defmodule Passbook.Helpers do
   end
 
   # Camelize strings in a map
+  def camelize("web_service_url"), do: "webServiceURL"
+
   def camelize(key) when is_binary(key) do
     capitalized = Macro.camelize(key)
     <<first>> <> rest = capitalized
